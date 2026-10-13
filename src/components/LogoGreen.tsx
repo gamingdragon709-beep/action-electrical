@@ -1,0 +1,70 @@
+import React from 'react';
+
+export const LogoGreen: React.FC<{ className?: string }> = ({
+  className = 'h-11 sm:h-12 w-auto',
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 315 102"
+      className={className}
+      fill="none"
+      role="img"
+      aria-label="Action Electrical & Mechanical Contractors Logo"
+    >
+      <defs>
+        <style>
+          {`
+            .logo-text-green {
+              font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              font-style: italic;
+              font-weight: 800;
+              letter-spacing: -0.015em;
+            }
+          `}
+        </style>
+      </defs>
+
+      {/* AE Monogram Emblem */}
+      <g id="ae-icon">
+        {/* Solid green left leg of A */}
+        <polygon points="3,94 41,94 76,6 49,6" fill="#008a38" />
+
+        {/* Solid green back stem of A / depth behind E */}
+        <polygon points="52,94 65,94 98,6 78,6" fill="#008a38" />
+
+        {/* Solid green bottom shelf under bottom bar of E */}
+        <polygon points="62,94 59,98 132,98 136,94" fill="#008a38" />
+
+        {/* Solid green top cap connecting to the peak */}
+        <polygon points="76,6 99,6 91,20 74,20" fill="#008a38" />
+
+        {/* The E outline - hollow transparent center with green stroke */}
+        <polygon
+          points="86,8 145,8 141,25 104,25 100,43 137,43 133,60 96,60 92,78 141,78 137,94 67,94"
+          fill="none"
+          stroke="#008a38"
+          strokeWidth="4.2"
+          strokeLinejoin="miter"
+          strokeMiterlimit="4"
+        />
+      </g>
+
+      {/* 4-Line Typography */}
+      <g fill="#008a38" className="logo-text-green">
+        <text x="154" y="23" fontSize="22" className="logo-text-green">
+          ACTION
+        </text>
+        <text x="154" y="47" fontSize="21" className="logo-text-green">
+          ELECTRICAL &amp;
+        </text>
+        <text x="154" y="71" fontSize="21" className="logo-text-green">
+          MECHANICAL
+        </text>
+        <text x="154" y="95" fontSize="21" className="logo-text-green">
+          CONTRACTORS
+        </text>
+      </g>
+    </svg>
+  );
+};

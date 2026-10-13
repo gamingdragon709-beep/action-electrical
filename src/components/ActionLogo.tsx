@@ -6,21 +6,20 @@ interface ActionLogoProps {
 }
 
 export const ActionLogo: React.FC<ActionLogoProps> = ({
-  className = 'h-11 w-auto',
+  className = 'h-11 sm:h-12 w-auto',
   variant = 'light',
 }) => {
-  // Primary brand green from the user's uploaded logo
-  const brandGreen = '#00873d';
+  // Brand green matching logo_green.svg
+  const green = '#008a38';
   
-  const iconColor = variant === 'white' ? '#ffffff' : brandGreen;
-  const textColor = variant === 'white' ? '#ffffff' : (variant === 'dark' ? '#f0fdf4' : brandGreen);
-  const eFill = variant === 'white' ? '#355f39' : '#ffffff';
-  const eStroke = variant === 'white' ? '#ffffff' : brandGreen;
+  const mainFill = variant === 'white' ? '#ffffff' : green;
+  const strokeColor = variant === 'white' ? '#ffffff' : green;
+  const textColor = variant === 'white' ? '#ffffff' : (variant === 'dark' ? '#f0fdf4' : green);
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 540 100"
+      viewBox="0 0 315 102"
       className={className}
       fill="none"
       role="img"
@@ -29,95 +28,120 @@ export const ActionLogo: React.FC<ActionLogoProps> = ({
       <defs>
         <style>
           {`
-            .logo-text {
-              font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+            .logo-font {
+              font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
               font-style: italic;
-              font-weight: 900;
-              letter-spacing: -0.01em;
+              font-weight: 800;
+              letter-spacing: -0.02em;
             }
           `}
         </style>
       </defs>
 
-      {/* Group for the AE Monogram Icon with Italic Shear */}
-      <g transform="translate(10, 0)">
-        {/* Left Solid Wedge of 'A' */}
-        <path
-          d="M 68 8 L 92 8 L 46 92 L 18 92 Z"
-          fill={iconColor}
-        />
-
-        {/* Center Vertical-ish Spine / Connecting 3D shadow */}
-        <path
-          d="M 94 8 L 102 8 L 74 92 L 66 92 Z"
-          fill={iconColor}
-          opacity="0.85"
-        />
-
-        {/* Outer offset underline shadow under the E */}
-        <path
-          d="M 72 92 L 70 96 L 138 96 L 140 92 Z"
-          fill={iconColor}
-        />
-
-        {/* The 'E' Monogram with crisp geometric arms */}
+      {/* --- AE MONOGRAM ICON --- */}
+      <g id="ae-icon">
+        {/* Solid green left leg of 'A' */}
         <polygon
           points="
-            86,12
-            152,12
-            149,27
-            108,27
-            104,44
-            144,44
-            141,59
-            101,59
-            97,76
-            146,76
-            143,91
-            75,91
+            3,94
+            41,94
+            76,6
+            49,6
           "
-          fill={eFill}
-          stroke={eStroke}
-          strokeWidth="4"
+          fill={mainFill}
+        />
+
+        {/* Solid green back stem of 'A' / depth behind 'E' */}
+        <polygon
+          points="
+            52,94
+            65,94
+            98,6
+            78,6
+          "
+          fill={mainFill}
+        />
+
+        {/* Solid green bottom shadow / shelf under the bottom bar of 'E' */}
+        <polygon
+          points="
+            62,94
+            59,99
+            132,99
+            136,94
+          "
+          fill={mainFill}
+        />
+
+        {/* Solid green top cap connecting to the peak */}
+        <polygon
+          points="
+            76,6
+            100,6
+            92,20
+            74,20
+          "
+          fill={mainFill}
+        />
+
+        {/* The 'E' outline - hollow/transparent center with green border */}
+        <polygon
+          points="
+            86,8
+            145,8
+            141,25
+            104,25
+            100,43
+            137,43
+            133,60
+            96,60
+            92,78
+            141,78
+            137,94
+            67,94
+          "
+          fill="none"
+          stroke={strokeColor}
+          strokeWidth="4.2"
           strokeLinejoin="miter"
           strokeMiterlimit="4"
         />
       </g>
 
-      {/* 4-Line Brand Typography (Exact text from uploaded image) */}
-      <g fill={textColor} className="logo-text">
+      {/* --- 4-LINE TYPOGRAPHY MATCHING logo_green.svg --- */}
+      <g fill={textColor} className="logo-font">
         <text
-          x="180"
+          x="154"
           y="23"
-          fontSize="24"
-          className="logo-text"
+          fontSize="22"
+          className="logo-font"
         >
           ACTION
         </text>
 
         <text
-          x="180"
+          x="154"
           y="47"
-          fontSize="23"
-          className="logo-text"
+          fontSize="21"
+          className="logo-font"
         >
           ELECTRICAL &amp;
         </text>
 
         <text
-          x="180"
+          x="154"
           y="71"
-          fontSize="23"
-          className="logo-text"
+          fontSize="21"
+          className="logo-font"
         >
           MECHANICAL
         </text>
 
         <text
-          x="180"
+          x="154"
           y="95"
-          fontSize="23"
-          className="logo-text"
+          fontSize="21"
+          className="logo-font"
         >
           CONTRACTORS
         </text>
