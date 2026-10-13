@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #0b1c30;
+    background-color: #f8f9ff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-display);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tag {
+  font-family: var(--font-mono);
+}
+
+/* Signature Architectural Arch Cut */
+.arch-frame {
+  border-top-left-radius: 220px;
+  border-top-right-radius: 220px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .arch-frame {
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+  }
+}
+
+/* Custom green wash overlay matching the screenshot */
+.green-tint-overlay {
+  background: linear-gradient(135deg, rgba(16, 75, 34, 0.88) 0%, rgba(22, 101, 52, 0.82) 100%);
+}
