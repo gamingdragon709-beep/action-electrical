@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Phone, Menu, X, ArrowUpRight, Zap } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
 import { ScreenType } from '../types';
+import { ActionLogo } from './ActionLogo';
 
 interface NavbarProps {
   currentScreen: ScreenType;
@@ -60,23 +61,14 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-3 flex items-center justify-between gap-6">
         {/* Brand Logo */}
         <button
           onClick={() => onNavigate('home')}
-          className="flex items-center gap-3.5 text-left group cursor-pointer"
+          className="flex items-center text-left group cursor-pointer hover:opacity-90 transition-opacity"
+          aria-label="Action Electrical &amp; Mechanical Contractors - Home"
         >
-          <div className="w-10 h-10 bg-[#00652c] rounded-xs flex items-center justify-center text-white shadow-xs group-hover:bg-[#004e22] transition-colors">
-            <Zap className="w-5 h-5 fill-white" />
-          </div>
-          <div>
-            <div className="text-xl font-bold tracking-tight text-[#0b1c30] flex items-center gap-1 leading-none font-display">
-              ACTION
-            </div>
-            <div className="text-[10px] font-semibold tracking-widest text-[#565e74] uppercase mt-0.5 font-mono">
-              ELECTRICAL &amp; MECHANICAL
-            </div>
-          </div>
+          <ActionLogo className="h-10 sm:h-12 w-auto" variant="light" />
         </button>
 
         {/* Desktop Navigation Links */}

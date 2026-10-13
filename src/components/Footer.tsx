@@ -1,6 +1,7 @@
 import React from 'react';
-import { Zap, Phone, MapPin, Shield } from 'lucide-react';
+import { Phone, MapPin, Shield } from 'lucide-react';
 import { ScreenType } from '../types';
+import { ActionLogo } from './ActionLogo';
 
 interface FooterProps {
   onNavigate: (screen: ScreenType) => void;
@@ -13,19 +14,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-emerald-700/50">
           {/* Col 1: Brand & Identity */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-white text-[#355f39] rounded-xs flex items-center justify-center font-bold">
-                <Zap className="w-4 h-4 fill-[#355f39]" />
-              </div>
-              <div>
-                <span className="text-xl font-bold tracking-tight text-white font-display">
-                  ACTION
-                </span>
-                <span className="block text-[10px] tracking-widest text-emerald-200 uppercase font-mono">
-                  CONTRACTORS
-                </span>
-              </div>
-            </div>
+            <button
+              onClick={() => onNavigate('home')}
+              className="text-left group cursor-pointer hover:opacity-90 transition-opacity"
+              aria-label="Action Electrical &amp; Mechanical Contractors - Home"
+            >
+              <ActionLogo className="h-11 sm:h-12 w-auto" variant="white" />
+            </button>
 
             <p className="text-sm text-emerald-100/90 leading-relaxed max-w-sm">
               Engineered Precision for Every Connection
