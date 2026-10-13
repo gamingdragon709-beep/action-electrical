@@ -1,38 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 315 102" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 100" fill="none">
   <defs>
     <style>
-      .logo-font {
-        font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      .logo-text {
+        font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
         font-style: italic;
-        font-weight: 800;
-        letter-spacing: -0.02em;
+        font-weight: 900;
+        letter-spacing: -0.01em;
       }
     </style>
   </defs>
-
-  <!-- AE Monogram Icon -->
-  <g id="ae-icon">
-    <!-- Solid green left leg of A -->
-    <polygon points="3,94 41,94 76,6 49,6" fill="#008a38" />
-
-    <!-- Solid green back stem of A / depth behind E -->
-    <polygon points="52,94 65,94 98,6 78,6" fill="#008a38" />
-
-    <!-- Solid green bottom shelf under bottom bar of E -->
-    <polygon points="62,94 59,99 132,99 136,94" fill="#008a38" />
-
-    <!-- Solid green top cap connecting to the peak -->
-    <polygon points="76,6 100,6 92,20 74,20" fill="#008a38" />
-
-    <!-- The E outline - hollow center with green stroke -->
-    <polygon points="86,8 145,8 141,25 104,25 100,43 137,43 133,60 96,60 92,78 141,78 137,94 67,94" fill="none" stroke="#008a38" stroke-width="4.2" stroke-linejoin="miter" stroke-miterlimit="4" />
+  <g transform="translate(10, 0)">
+    <!-- Left Solid Wedge of A -->
+    <path d="M 68 8 L 92 8 L 46 92 L 18 92 Z" fill="#00873d" />
+    <!-- Center Spine / shadow -->
+    <path d="M 94 8 L 102 8 L 74 92 L 66 92 Z" fill="#00873d" opacity="0.85" />
+    <!-- Outer offset underline shadow under E -->
+    <path d="M 72 92 L 70 96 L 138 96 L 140 92 Z" fill="#00873d" />
+    <!-- The E with green border and white fill -->
+    <polygon points="86,12 152,12 149,27 108,27 104,44 144,44 141,59 101,59 97,76 146,76 143,91 75,91" fill="#ffffff" stroke="#00873d" stroke-width="4" stroke-linejoin="miter" stroke-miterlimit="4" />
   </g>
-
-  <!-- 4-Line Typography -->
-  <g fill="#008a38" class="logo-font">
-    <text x="154" y="23" font-size="22" class="logo-font">ACTION</text>
-    <text x="154" y="47" font-size="21" class="logo-font">ELECTRICAL &amp;</text>
-    <text x="154" y="71" font-size="21" class="logo-font">MECHANICAL</text>
-    <text x="154" y="95" font-size="21" class="logo-font">CONTRACTORS</text>
+  <g fill="#00873d" class="logo-text">
+    <text x="180" y="23" font-size="24" class="logo-text">ACTION</text>
+    <text x="180" y="47" font-size="23" class="logo-text">ELECTRICAL &amp;</text>
+    <text x="180" y="71" font-size="23" class="logo-text">MECHANICAL</text>
+    <text x="180" y="95" font-size="23" class="logo-text">CONTRACTORS</text>
   </g>
 </svg>

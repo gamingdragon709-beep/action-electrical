@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, MapPin, Shield } from 'lucide-react';
 import { ScreenType } from '../types';
-import { LogoWhite } from './LogoWhite';
+import { ActionLogo } from './ActionLogo';
 
 interface FooterProps {
   onNavigate: (screen: ScreenType) => void;
@@ -19,7 +19,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               className="text-left group cursor-pointer hover:opacity-90 transition-opacity"
               aria-label="Action Electrical &amp; Mechanical Contractors - Home"
             >
-              <LogoWhite className="h-11 sm:h-12 w-auto" />
+              <ActionLogo className="h-11 sm:h-12 w-auto" variant="white" />
             </button>
 
             <p className="text-sm text-emerald-100/90 leading-relaxed max-w-sm">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { ScreenType } from '../types';
-import { LogoGreen } from './LogoGreen';
+import { ActionLogo } from './ActionLogo';
 
 interface NavbarProps {
   currentScreen: ScreenType;
@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="flex items-center text-left group cursor-pointer hover:opacity-90 transition-opacity"
           aria-label="Action Electrical &amp; Mechanical Contractors - Home"
         >
-          <LogoGreen className="h-10 sm:h-12 w-auto" />
+          <ActionLogo className="h-10 sm:h-12 w-auto" variant="light" />
         </button>
 
         {/* Desktop Navigation Links */}
