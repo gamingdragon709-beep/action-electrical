@@ -1,16 +1,27 @@
 import { ServiceItem, Testimonial, JobOpening, CaseStudy } from '../types';
 
+import heroSwitchgear from '../assets/images/hero_switchgear_1791525099227.jpg';
+import serviceElec from '../assets/images/service_elec_round_1791525312722.jpg';
+import serviceHvac from '../assets/images/service_hvac_round_1791525368677.jpg';
+import serviceControls from '../assets/images/service_controls_round_1791525429876.jpg';
+import serviceGenerators from '../assets/images/service_generators_round_1791525496669.jpg';
+import serviceThermal from '../assets/images/service_thermal_round_1791525569797.jpg';
+import bannerMachinery from '../assets/images/banner_chiller_machinery_1791525208595.jpg';
+import archPanelWork from '../assets/images/arch_panel_work_1791525131812.jpg';
+import bannerTeamHire from '../assets/images/banner_team_hire_1791525260476.jpg';
+import archCleanPlant from '../assets/images/arch_clean_plant_1791525166935.jpg';
+
 export const ASSET_IMAGES = {
-  heroSwitchgear: '/src/assets/images/hero_switchgear_1791525099227.jpg',
-  serviceElec: '/src/assets/images/service_elec_round_1791525312722.jpg',
-  serviceHvac: '/src/assets/images/service_hvac_round_1791525368677.jpg',
-  serviceControls: '/src/assets/images/service_controls_round_1791525429876.jpg',
-  serviceGenerators: '/src/assets/images/service_generators_round_1791525496669.jpg',
-  serviceThermal: '/src/assets/images/service_thermal_round_1791525569797.jpg',
-  bannerMachinery: '/src/assets/images/banner_chiller_machinery_1791525208595.jpg',
-  archPanelWork: '/src/assets/images/arch_panel_work_1791525131812.jpg',
-  bannerTeamHire: '/src/assets/images/banner_team_hire_1791525260476.jpg',
-  archCleanPlant: '/src/assets/images/arch_clean_plant_1791525166935.jpg',
+  heroSwitchgear,
+  serviceElec,
+  serviceHvac,
+  serviceControls,
+  serviceGenerators,
+  serviceThermal,
+  bannerMachinery,
+  archPanelWork,
+  bannerTeamHire,
+  archCleanPlant,
 };
 
 export const SERVICES: ServiceItem[] = [
